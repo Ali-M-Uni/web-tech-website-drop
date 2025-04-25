@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mochi Ice Cream Recipe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Mochi Ice Cream</h1>
+    <p>A sweet and chewy Japanese dessert</p>
+  </header>
+
+  <main>
+    <section class="menu">
+      <h2>Ingredients</h2>
+      <p>- Glutinous rice flour<br>- Sugar<br>- Water<br>- Cornstarch<br>- Ice cream (any flavour)</p>
+
+      <h2>Instructions</h2>
+      <p>1. Mix rice flour, sugar, and water; microwave until dough forms.<br>
+         2. Dust surface with cornstarch and roll dough out.<br>
+         3. Cut into circles and wrap around small scoops of ice cream.<br>
+         4. Freeze until firm and serve chilled.</p>
+    </section>
+
+    <button id="order-btn">Download This Recipe</button>
+  </main>
+
+<a href="index.html">
+      <button>Back to Main Menu</button>
+    </a>
+
+  <footer>
+    <p>&copy; 2025 Sakura Japanese Cuisine Recipes</p>
+  </footer>
+
+  <script>
+    document.getElementById("order-btn").addEventListener("click", () => {
+      alert("Recipe downloaded! Enjoy your Mochi Ice Cream.");
+    });
+  </script>
+</body>
+</html>
