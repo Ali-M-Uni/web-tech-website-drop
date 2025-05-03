@@ -1,42 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sakura Japanese Menu</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tastes of the Globe</title>
+  <link rel="stylesheet" href="index-style.css">
+  <title>Tastes of the Globe</title> 
 </head>
 <body>
-  <header>
-    <h1>Welcome to Sakura Recipes</h1>
-    <p>Authentic Japanese Flavours, Served Fresh</p>
-  </header>
 
-  <main>
-    <section class="menu">
-      <h2><a href="salmon-nigiri.html">Special Sushi</a></h2>
-      <img src="images/salmon-nigiri.jpg" alt="Salmon Nigiri" class="food-photo" />
-      <p><strong>Salmon Nigiri</strong> - Fresh, silky salmon served on top of perfectly seasoned rice. A classic favourite =)</p>
+<header>
+  <h1>Welcome to Tastes of the Globe</h1>
+</header>
 
-      <h2><a href="shoyu-ramen.html">Signature Ramen</a></h2>
-      <img src="images/shoyu-ramen.jpg" alt="Shoyu Ramen" class="food-photo" />
-      <p><strong>Shoyu Ramen</strong> - A delicious soy-based broth paired with tender noodles, topped with a soft-boiled egg :)</p>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="#">Breakfast</a>
+  <a href="#">Lunch</a>
+  <a href="#">Dinner</a>
+  <a href="#">Quick Meals</a>
+  <a href="#">Desserts</a>
+  <a href="#">Vegetarian</a>
+  <a href="#">Vegan</a>
+  <a href="#">Snacks</a>
+  <a href="#">Drinks</a>
+  <a href="#">Healthy Choices</a>
+  <a href="#">Kids Meals</a>
+</nav>
 
-      <h2><a href="mochi-ice-cream.html">Sweet Ending</a></h2>
-      <img src="images/mochi-ice-cream.jpg" alt="Mochi Ice Cream" class="food-photo" />
-      <p><strong>Mochi Ice Cream</strong> - Delicately chewy rice dough filled with rich ice cream, a delightful treat ;)</p>
-    </section>
+<div class="main-content">
+  <h2>Explore Delicious Recipes</h2>
+  <p>Browse our curated collection of tasty dishes from around the world!</p>
 
-    <button id="order-btn">Order Our Latest CookBook Now!</button>
+  <div class="categories">
+    <div class="category">
+      <a href="mexican.html">
+        <img src="mexican.jpg" alt="Mexican Food">
+        <h3>Mexican</h3>
+      </a>
+    </div>    
+    <div class="category">
+      <a href="japanese.html">
+        <img src="japanese.jpg" alt="Japanese Food">
+        <h3>Japanese</h3>
+      </a>
+    </div>
+    <div class="category">
+      <a href="italian.html">
+        <img src="italian.jpg" alt="Italian Food">
+        <h3>Italian</h3>
+      </a>
+    </div>
+    <div class="category">
+    <a href="indian.html">
+      <img src="indian.jpg" alt="Indian Food">
+      <h3>Indian</h3>
+    </a>
+    </div>
+    <div class="category">
+    <a href="french.html">
+      <img src="french.jpeg" alt="French Food">
+      <h3>French</h3>
+    </a>
+    </div>
+    <div class="category">
+    <a href="american.html">
+      <img src="american.webp" alt="American Food">
+      <h3>American</h3>
+    </a>
+    </div>
+    <div class="category">
+    <a href="greek.html">
+      <img src="greek.webp" alt="Greek Food">
+      <h3>Greek</h3>
+    </a>
+    </div>
+  </div>
+</div>
 
-   
-    <a href="mexican-cuisine.html" class="button-link">Explore Our Mexican Cuisine</a>
-  </main>
+<div id="cooking-timer">
+  <h3>Cooking Timer</h3>
+  <input type="number" id="minutes" placeholder="Min" min="0"> :
+  <input type="number" id="seconds" placeholder="Sec" min="0">
+  <div>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="pauseTimer()">Pause</button>
+    <button onclick="resetTimer()">Reset</button>
+  </div>
+  <p id="countdown">00:00</p>
+</div>
 
-  <footer>
-    <p>&copy; 2025 Sakura Japanese Cuisine Recipes</p>
-  </footer>
+<div class="social-section">
+  <p class="social-text">Share with your friends and family!</p>
+  <div class="social-bar">
+    <a href="https://www.facebook.com" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+    </a>
+    <a href="https://www.instagram.com" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+    </a>
+    <a href="https://twitter.com" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="X (Twitter)" />
+    </a>
+    <a href="https://www.whatsapp.com" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+    </a>
+  </div>
 
-  <script src="script.js"></script>
+  <a href="#" id="order-btn" class="order-button">Order Our Latest Cookbook Now!</a>
+</div>
+
+<footer>
+  &copy; 2025 Tastes of the Globe.
+</footer>
+
+<audio id="alarm-sound" src="alarm.mp3" loop></audio>
+
+<script src="script.js"></script>
+
 </body>
 </html>
+
+
