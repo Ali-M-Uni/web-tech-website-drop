@@ -2,43 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mochi Ice Cream Recipe</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="japanese.css" />
+  <link rel="stylesheet" href="recipe-card.css" />
 </head>
 <body>
-  <header>
-    <h1>Mochi Ice Cream</h1>
-    <p>A sweet and chewy Japanese dessert</p>
-  </header>
 
-  <main>
-    <section class="menu">
-      <h2>Ingredients</h2>
-      <p>- Glutinous rice flour<br>- Sugar<br>- Water<br>- Cornstarch<br>- Ice cream (any flavour)</p>
+<header>
+  <h1>Mochi Ice Cream</h1>
+  <p>A sweet and chewy Japanese dessert 🍡</p>
+</header>
 
-      <h2>Instructions</h2>
-      <p>1. Mix rice flour, sugar, and water; microwave until dough forms.<br>
-         2. Dust surface with cornstarch and roll dough out.<br>
-         3. Cut into circles and wrap around small scoops of ice cream.<br>
-         4. Freeze until firm and serve chilled.</p>
-    </section>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="#">Breakfast</a>
+  <a href="#">Lunch</a>
+  <a href="#">Dinner</a>
+  <a href="#">Quick Meals</a>
+  <a href="#">Desserts</a>
+  <a href="#">Vegetarian</a>
+  <a href="#">Vegan</a>
+  <a href="#">Snacks</a>
+  <a href="#">Drinks</a>
+  <a href="#">Healthy Choices</a>
+  <a href="#">Kids Meals</a>
+</nav>
 
-    <button id="order-btn">Download This Recipe</button>
-  </main>
+<main>
+  <section class="recipe-flip-container">
+    <div class="flip-card" onclick="flipCard(this)">
+      <div class="flip-inner">
+        <!-- Front side -->
+        <div class="flip-front">
+          <h2>Ingredients</h2>
+          <ul>
+            <li>Glutinous rice flour</li>
+            <li>Sugar</li>
+            <li>Water</li>
+            <li>Cornstarch</li>
+            <li>Ice cream (any flavour)</li>
+          </ul>
+          <p class="flip-tip">(Click to see steps)</p>
+        </div>
 
-<a href="index.html">
-      <button>Back to Main Menu</button>
-    </a>
+        <!-- Back side -->
+        <div class="flip-back">
+          <h2>Instructions</h2>
+          <ol>
+            <li>Mix rice flour, sugar, and water; microwave until dough forms.</li>
+            <li>Dust surface with cornstarch and roll dough out.</li>
+            <li>Cut into circles and wrap around small scoops of ice cream.</li>
+            <li>Freeze until firm and serve chilled.</li>
+          </ol>
+          <p class="flip-tip">(Click to flip back)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-  <footer>
-    <p>&copy; 2025 Sakura Japanese Cuisine Recipes</p>
-  </footer>
+<!-- Cooking Timer -->
+<div id="cooking-timer">
+  <h3>Cooking Timer</h3>
+  <input type="number" id="minutes" placeholder="Min" min="0"> :
+  <input type="number" id="seconds" placeholder="Sec" min="0">
+  <div>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="pauseTimer()">Pause</button>
+    <button onclick="resetTimer()">Reset</button>
+  </div>
+  <p id="countdown">00:00</p>
+</div>
 
-  <script>
-    document.getElementById("order-btn").addEventListener("click", () => {
-      alert("Recipe downloaded! Enjoy your Mochi Ice Cream.");
-    });
-  </script>
+<!-- Alarm -->
+<audio id="alarm-sound" src="larm.mp3" loop></audio>
+
+<!-- Order/Download Button -->
+<button id="order-btn">Download This Recipe</button>
+
+
+<footer>
+  <p>&copy; 2025 Sakura Japanese Cuisine Recipes</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

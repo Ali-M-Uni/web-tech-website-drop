@@ -2,45 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shoyu Ramen Recipe</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="japanese.css" />
+  <link rel="stylesheet" href="recipe-card.css" />
 </head>
 <body>
-  <header>
-    <h1>Shoyu Ramen</h1>
-    <p>Comforting soy-based noodle soup</p>
-  </header>
 
-  <main>
-    <section class="menu">
-      <h2>Ingredients</h2>
-      <p>- Ramen noodles<br>- Chicken or vegetable broth<br>- Soy sauce<br>- Garlic, ginger<br>- Spring onions<br>- Soft-boiled egg<br>- Bamboo shoots (optional)</p>
+<header>
+  <h1>Shoyu Ramen</h1>
+  <p>Comforting soy-based noodle soup 🍜</p>
+</header>
 
-      <h2>Instructions</h2>
-      <p>1. Simmer broth with garlic and ginger.<br>
-         2. Add soy sauce to taste.<br>
-         3. Cook ramen noodles separately.<br>
-         4. Pour broth over noodles in a bowl.<br>
-         5. Top with egg, spring onions, and bamboo shoots.</p>
-    </section>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="#">Breakfast</a>
+  <a href="#">Lunch</a>
+  <a href="#">Dinner</a>
+  <a href="#">Quick Meals</a>
+  <a href="#">Desserts</a>
+  <a href="#">Vegetarian</a>
+  <a href="#">Vegan</a>
+  <a href="#">Snacks</a>
+  <a href="#">Drinks</a>
+  <a href="#">Healthy Choices</a>
+  <a href="#">Kids Meals</a>
+</nav>
 
-    <button id="order-btn">Download This Recipe</button>
-  </main>
+<main>
+  <section class="recipe-flip-container">
+    <div class="flip-card" onclick="flipCard(this)">
+      <div class="flip-inner">
+        <!-- Front -->
+        <div class="flip-front">
+          <h2>Ingredients</h2>
+          <ul>
+            <li>Ramen noodles</li>
+            <li>Chicken or vegetable broth</li>
+            <li>Soy sauce</li>
+            <li>Garlic, ginger</li>
+            <li>Spring onions</li>
+            <li>Soft-boiled egg</li>
+            <li>Bamboo shoots (optional)</li>
+          </ul>
+          <p class="flip-tip">(Click to see steps)</p>
+        </div>
 
-    <a href="index.html">
-      <button>← Back to Main Menu</button>
-    </a>
+        <!-- Back -->
+        <div class="flip-back">
+          <h2>Instructions</h2>
+          <ol>
+            <li>Simmer broth with garlic and ginger.</li>
+            <li>Add soy sauce to taste.</li>
+            <li>Cook ramen noodles separately.</li>
+            <li>Pour broth over noodles in a bowl.</li>
+            <li>Top with egg, spring onions, and bamboo shoots.</li>
+          </ol>
+          <p class="flip-tip">(Click to flip back)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
+<!-- Cooking Timer -->
+<div id="cooking-timer">
+  <h3>Cooking Timer</h3>
+  <input type="number" id="minutes" placeholder="Min" min="0"> :
+  <input type="number" id="seconds" placeholder="Sec" min="0">
+  <div>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="pauseTimer()">Pause</button>
+    <button onclick="resetTimer()">Reset</button>
+  </div>
+  <p id="countdown">00:00</p>
+</div>
 
-  <footer>
-    <p>&copy; 2025 Sakura Japanese Cuisine Recipes</p>
-  </footer>
+<!-- Alarm -->
+<audio id="alarm-sound" src="alarm.mp3" loop></audio>
 
-  <script>
-    document.getElementById("order-btn").addEventListener("click", () => {
-      alert("Recipe downloaded! Enjoy your comforting bowl of Shoyu Ramen.");
-    });
-  </script>
+<!-- Download Button -->
+<button id="order-btn">Download This Recipe</button>
+
+<footer>
+  <p>&copy; 2025 Sakura Japanese Cuisine Recipes</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

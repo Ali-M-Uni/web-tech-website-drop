@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sakura Japanese Menu</title>
+  <link rel="stylesheet" href="japanese-style.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to Sakura Recipes</h1>
+    <p>Authentic Japanese Flavours, Served Fresh</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#">Breakfast</a>
+    <a href="#">Lunch</a>
+    <a href="#">Dinner</a>
+    <a href="#">Quick Meals</a>
+    <a href="#">Desserts</a>
+    <a href="#">Vegetarian</a>
+    <a href="#">Vegan</a>
+    <a href="#">Snacks</a>
+    <a href="#">Drinks</a>
+    <a href="#">Healthy Choices</a>
+    <a href="#">Kids Meals</a>
+  </nav>
+
+  <main>
+    <section class="categories">
+      <div class="category">
+        <a href="salmon-nigiri.html">
+          <img src="salmon-nigiri.jpg" alt="Salmon Nigiri" class="food-photo" />
+          <h3>Salmon Nigiri</h3>
+        </a>
+        <p>Fresh, silky salmon served on top of perfectly seasoned rice. A classic favourite 😊</p>
+      </div>
+
+      <div class="category">
+        <a href="shoyu-ramen.html">
+          <img src="shoyu-ramen.jpg" alt="Shoyu Ramen" class="food-photo" />
+          <h3>Shoyu Ramen</h3>
+        </a>
+        <p>A delicious soy-based broth paired with tender noodles, topped with a soft-boiled egg 🍜</p>
+      </div>
+
+      <div class="category">
+        <a href="mochi-ice-cream.html">
+          <img src="mochi-ice-cream.jpg" alt="Mochi Ice Cream" class="food-photo" />
+          <h3>Mochi Ice Cream</h3>
+        </a>
+        <p>Delicately chewy rice dough filled with rich ice cream. A delightful treat 🍡</p>
+      </div>
+    </section>
+
+    <div id="cooking-timer">
+      <h3>Cooking Timer</h3>
+      <input type="number" id="minutes" placeholder="Min" min="0"> :
+      <input type="number" id="seconds" placeholder="Sec" min="0">
+      <div>
+        <button onclick="startTimer()">Start</button>
+        <button onclick="pauseTimer()">Pause</button>
+        <button onclick="resetTimer()">Reset</button>
+      </div>
+      <p id="countdown">00:00</p>
+    </div>
+
+    <audio id="alarm-sound" src="alarm.mp3" loop></audio>
+
+    <button id="order-btn">Order Our Latest CookBook Now!</button>
+
+    <a href="mexican.html" class="button-link">Explore Our Mexican Cuisine</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sakura Japanese Cuisine Recipes</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
